@@ -1,4 +1,4 @@
-module github.ibm.com/GoldenEye/resource-group-module
+module github.com/terraform-ibm-modules/terraform-ibm-resource-group
 
 go 1.18
 
