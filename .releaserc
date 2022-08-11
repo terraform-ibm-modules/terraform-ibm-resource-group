@@ -1,15 +1,15 @@
 {
-  "tagFormat": "${version}",
+  "tagFormat": "v${version}",
+  "branches": ["main"],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    ["@semantic-release/github",{
-      "githubUrl": "https://github.ibm.com",
-      "githubApiPathPrefix": "/api/v3"
+    "@semantic-release/github",
+    ["@semantic-release/git", {
+      "assets": "false"
     }],
-    ["@semantic-release/exec",{
-      "publishCmd": "./ci/run-catalog-onboarding-pipeline.sh resource-group-module 7df1e4ca-d54c-4fd0-82ce-3d13247308cd 179e021a-b2b6-470c-a3a8-6d7365d1e379 ${nextRelease.version} ibm existing-resource-group"
+    ["@semantic-release/exec", {
+      "successCmd": "echo \"SEMVER_VERSION=${nextRelease.version}\" >> $GITHUB_ENV"
     }]
   ]
 }

@@ -1,6 +1,5 @@
 # Tests
 
-For information on how to create and run tests, see the following
-[guide](https://github.ibm.com/GoldenEye/documentation/blob/master/tests.md).
+For information about how to create and run tests, see [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests) in the project documentation.
 
-<!-- Include any extra steps not in above guide that may be specific to tests in this project -->
+<!-- Add any more steps that are specific to testing this module and that are not in the docs. -->

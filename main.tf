@@ -1,5 +1,5 @@
 ##############################################################################
-# resource-group-module
+# terraform-ibm-resource-group-module
 #
 # Looks up resource group and creates a new one if none already exists
 ##############################################################################

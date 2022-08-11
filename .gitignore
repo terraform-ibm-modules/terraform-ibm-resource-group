@@ -52,5 +52,5 @@ Brewfile.lock.json
 # Node modules
 /node_modules
 
-# VS Code settings
+# Ignore .vscode files
 .vscode/
