@@ -1,1 +1,1 @@
-common-dev-assets/module-assets/Brewfile
+./common-dev-assets/module-assets/Brewfile

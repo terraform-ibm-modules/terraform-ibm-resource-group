@@ -1,24 +1,16 @@
-/********************************************************************
+##############################################################################
+# Input Variables
+##############################################################################
 
-This file is used to declare ROOT varaibles.
-
-E.g:
-
-variable "at_service_name" {
+variable "resource_group_name" {
   type        = string
-  description = "Activity Tracker: The name of the activity tracker"
+  description = "Name of the resource group to create. Required if not using existing resource group"
+  default     = null
 }
 
-variable "at_bind_key" {
-  description = "Activity Tracker: Enable this to bind key to instance (true/false)"
-  type        = bool
-  default     = false
+variable "existing_resource_group_name" {
+  type        = string
+  description = "Name of the existing resource group.  Required if not creating new resource group"
+  default     = null
 }
-
-variable "at_create_instance" {
-  description = "Activity Tracker: Controls if Activity Tracker should be created"
-  type        = bool
-  default     = true
-}
-
-********************************************************************/
+##############################################################################
