@@ -5,29 +5,15 @@
       "name": "existing_resource_group_name",
       "type": "string",
       "description": "Name of the existing resource group.  Required if not creating new resource group",
-      "source": [
-        "data.ibm_resource_group.existing_resource_group.count",
-        "data.ibm_resource_group.existing_resource_group.name",
-        "ibm_resource_group.resource_group.count"
-      ],
       "pos": {
         "filename": "variables.tf",
         "line": 11
-      },
-      "cloud_data_type": "resource_group",
-      "computed": true,
-      "cloud_data_range": [
-        "resolved_to:name"
-      ]
+      }
     },
     "resource_group_name": {
       "name": "resource_group_name",
       "type": "string",
       "description": "Name of the resource group to create. Required if not using existing resource group",
-      "required": true,
-      "source": [
-        "ibm_resource_group.resource_group.name"
-      ],
       "pos": {
         "filename": "variables.tf",
         "line": 5
@@ -40,7 +26,7 @@
       "description": "Resource group ID",
       "pos": {
         "filename": "outputs.tf",
-        "line": 10
+        "line": 12
       }
     },
     "resource_group_name": {
