@@ -5,7 +5,7 @@
 output "resource_group_name" {
   description = "Resource group name"
   value       = var.existing_resource_group_name != null ? data.ibm_resource_group.existing_resource_group[0].name : ibm_resource_group.resource_group[0].name
-  # explicit dependency required here to ensure resource group name is not returned until group is created
+  # explicit dependency required as workaround for https://github.com/IBM-Cloud/terraform-provider-ibm/issues/4170
   depends_on = [ibm_resource_group.resource_group]
 }
 
