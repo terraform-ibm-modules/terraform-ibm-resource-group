@@ -40,7 +40,7 @@
       "description": "Resource group ID",
       "pos": {
         "filename": "outputs.tf",
-        "line": 12
+        "line": 10
       }
     },
     "resource_group_name": {
