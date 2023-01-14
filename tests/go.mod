@@ -3,7 +3,7 @@ module github.com/terraform-ibm-modules/terraform-ibm-resource-group
 go 1.19
 
 require (
-	github.com/gruntwork-io/terratest v0.41.8
+	github.com/gruntwork-io/terratest v0.41.9
 	github.com/stretchr/testify v1.8.1
 	github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.3.7
 )
