@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/gruntwork-io/terratest v0.41.11
 	github.com/stretchr/testify v1.8.2
-	github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.5.6
+	github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.5.7
 )
 
 require (
