@@ -15,3 +15,7 @@ jobs:
   call-terraform-ci-pipeline:
     uses: terraform-ibm-modules/common-pipeline-assets/.github/workflows/common-terraform-module-ci.yml@v1.7.3
     secrets: inherit
+    with:
+        craTarget: "examples/new-resource-group"
+        craGoalIgnoreFile: "cra-tf-validate-ignore-goals.json"
+        craEnvironmentVariables: "TF_VAR_resource_group_name=new-resource-group"
