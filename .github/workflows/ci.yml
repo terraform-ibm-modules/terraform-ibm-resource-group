@@ -18,3 +18,4 @@ jobs:
     with:
         craTarget: "examples/new-resource-group"
         craGoalIgnoreFile: "cra-tf-validate-ignore-goals.json"
+        craEnvironmentVariables: "TF_VAR_resource_group_name=new-resource-group"
