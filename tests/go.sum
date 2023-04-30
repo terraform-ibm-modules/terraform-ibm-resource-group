@@ -720,8 +720,8 @@ github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO
 github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
-github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.8.10 h1:QPutA9gLc3kAZOk8jDRg7mv5WQmj+ieZXyyx8NlMSEo=
-github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.8.10/go.mod h1:OYOo/J5SkZZRkbdVi4151tB1s6HtIuLFlmBH6DKkBc4=
+github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.8.11 h1:z2YSMb6utRtmIFY1XBx6PpZRehbkA2D6a6ZK6/oWVrM=
+github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper v1.8.11/go.mod h1:sIyf4PW7M0U/VHGdS06L4+RaD1tiTn79cVJOOuTt9E4=
 github.com/tidwall/pretty v1.0.0 h1:HsD+QiTn7sK6flMKIvNmpqz1qrpP3Ps6jOKIKMooyg4=
 github.com/tidwall/pretty v1.0.0/go.mod h1:XNkn88O1ChpSDQmQeStsy+sBenx6DDtFZJxhVysOjyk=
 github.com/tmccombs/hcl2json v0.3.3 h1:+DLNYqpWE0CsOQiEZu+OZm5ZBImake3wtITYxQ8uLFQ=
