@@ -2,9 +2,12 @@
 # Resource group module
 
 <!-- UPDATE BADGE: Update the link for the badge below-->
+[![Stable (With quality checks)](https://img.shields.io/badge/Status-Stable%20(With%20quality%20checks)-green)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![Build Status](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/actions/workflows/ci.yml/badge.svg)](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/actions/workflows/ci.yml)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-resource-group?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/releases/latest)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.
 
@@ -26,7 +29,6 @@ output "resource_group_id" {
   value       = module.resource_group.resource_group_id
   description = "Resource group ID"
 }
-
 ```
 
 New resource group
