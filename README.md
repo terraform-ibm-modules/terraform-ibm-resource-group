@@ -15,8 +15,7 @@ This module returns the ID for the name of a resource group. It can also create 
 Existing resource group
 ```hcl
 module "resource_group" {
-  # Replace "main" with a GIT release version to lock into a specific release
-  source                       = "git::https://github.com/terraform-ibm-resource-group/terraform-ibm-resource-group.git?ref=main"
+  source  = "../.."
   existing_resource_group_name = var.resource_group_name
 }
 output "resource_group_name" {
@@ -33,8 +32,7 @@ output "resource_group_id" {
 New resource group
 ```hcl
 module "resource_group" {
-  # Replace "main" with a GIT release version to lock into a specific release
-  source                       = "git::https://github.com/terraform-ibm-resource-group/terraform-ibm-resource-group.git?ref=main"
+  source  = "../.."
   resource_group_name = var.resource_group_name
 }
 output "resource_group_name" {
