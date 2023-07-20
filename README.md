@@ -15,7 +15,7 @@ This module returns the ID for the name of a resource group. It can also create 
 Existing resource group
 ```hcl
 module "resource_group" {
-  source                       = "terraform-ibm-modules/secrets-manager-private-cert/ibm"
+  source                       = "terraform-ibm-modules/resource-group/ibm"
   version                      = "latest" # Replace "latest" with a release version to lock into a specific release
   existing_resource_group_name = var.resource_group_name
 }
@@ -33,7 +33,7 @@ output "resource_group_id" {
 New resource group
 ```hcl
 module "resource_group" {
-  source              = "terraform-ibm-modules/secrets-manager-private-cert/ibm"
+  source              = "terraform-ibm-modules/resource-group/ibm"
   version             = "latest" # Replace "latest" with a release version to lock into a specific release
   resource_group_name = var.resource_group_name
 }
