@@ -1,0 +1,70 @@
+{
+    "products": [
+        {
+            "name": "terraform-ibm-resource-group",
+            "label": "Resource Group module",
+            "product_kind": "module",
+            "tags": [
+                "dev_ops",
+                "target_terraform",
+                "terraform",
+                "module"
+            ],
+            "keywords": [
+                "terraform",
+                "resource-group",
+                "group"
+            ],
+            "short_description": "Looks up or creates an IBM Cloud resource group by name",
+            "long_description": "This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.",
+            "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/blob/main/README.md",
+            "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/GoldeneyeDeployableArchitecture.svg",
+            "features": [
+                {
+                    "title": "Create new IBM Cloud Resource Group",
+                    "description": "Create a new IBM Cloud Resource Group and return the ID."
+                },
+                {
+                    "title": "Return the ID of an existing IBM Cloud resource Group",
+                    "description": "Pass the name of an existing IBM Cloud Resource Group, and the module will return the ID of that group."
+                }
+            ],
+            "flavors": [
+                {
+                    "label": "New Resource Group",
+                    "name": "new-resource-group",
+                    "working_directory": "examples/new-resource-group/",
+                    "architecture": {
+                        "diagrams": [
+                            {
+                                "diagram": {
+                                    "caption": " ",
+                                    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg",
+                                    "type": "image/svg+xml"
+                                },
+                                "description": " "
+                            }
+                        ]
+                    }
+                },
+                {
+                    "label": "Existing Resource Group",
+                    "name": "existing-resource-group",
+                    "working_directory": "examples/existing-resource-group",
+                    "architecture": {
+                        "diagrams": [
+                            {
+                                "diagram": {
+                                    "caption": " ",
+                                    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg",
+                                    "type": "image/svg+xml"
+                                },
+                                "description": " "
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
