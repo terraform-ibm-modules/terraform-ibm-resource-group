@@ -33,7 +33,7 @@
                 {
                     "label": "New Resource Group",
                     "name": "new-resource-group",
-                    "working_directory": "examples/new-resource-group/",
+                    "working_directory": "examples/new-resource-group",
                     "architecture": {
                         "diagrams": [
                             {
