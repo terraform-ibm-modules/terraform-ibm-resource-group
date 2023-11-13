@@ -25,8 +25,8 @@
                     "description": "Create an IBM Cloud resource group and return the ID."
                 },
                 {
-                    "title": "Return the ID of an existing IBM Cloud resource Group",
-                    "description": "Pass the name of an existing IBM Cloud Resource Group, and the module will return the ID of that group."
+                    "title": "Return the ID of an IBM Cloud resource group",
+                    "description": "Pass in the name of an IBM Cloud resource group. The module returns the ID of the group."
                 }
             ],
             "flavors": [
