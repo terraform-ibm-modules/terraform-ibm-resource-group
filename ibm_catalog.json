@@ -48,7 +48,7 @@
                     }
                 },
                 {
-                    "label": "Existing Resource Group",
+                    "label": "Existing resource group",
                     "name": "existing-resource-group",
                     "working_directory": "examples/existing-resource-group",
                     "architecture": {
