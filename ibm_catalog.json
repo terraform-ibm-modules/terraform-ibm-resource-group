@@ -22,7 +22,7 @@
             "features": [
                 {
                     "title": "Create an IBM Cloud resource group",
-                    "description": "Create a new IBM Cloud Resource Group and return the ID."
+                    "description": "Create an IBM Cloud resource group and return the ID."
                 },
                 {
                     "title": "Return the ID of an existing IBM Cloud resource Group",
