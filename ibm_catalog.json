@@ -2,7 +2,7 @@
     "products": [
         {
             "name": "terraform-ibm-resource-group",
-            "label": "Resource Group module",
+            "label": "Resource group module",
             "product_kind": "module",
             "tags": [
                 "dev_ops",
@@ -31,7 +31,7 @@
             ],
             "flavors": [
                 {
-                    "label": "New Resource Group",
+                    "label": "New resource group",
                     "name": "new-resource-group",
                     "working_directory": "examples/new-resource-group",
                     "architecture": {
