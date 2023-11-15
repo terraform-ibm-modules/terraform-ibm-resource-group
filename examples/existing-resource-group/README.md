@@ -1,3 +1,3 @@
-# Existing Resource Group
+# Existing Resource group example
 
-An example using an existing resource group
+An example showing how the module can take in an existing Resource group name, and return the Resource group ID as an output.

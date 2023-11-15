@@ -1,3 +1,3 @@
-# New Resource Group Example
+# New Resource group example
 
-An example creating a new resource group.
+An example showing how to create a new Resource group
