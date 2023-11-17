@@ -56,7 +56,7 @@
                             {
                                 "diagram": {
                                     "caption": "Existing resource group example",
-                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleDiagram_v2.svg",
+                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
                                     "type": "image/svg+xml"
                                 },
                                 "description": "An example that shows how the module can take in an existing resource group name and return the resource group ID as an output."
