@@ -13,8 +13,8 @@ This module returns the ID for the name of a resource group. It can also create 
 ## Overview
 * [terraform-ibm-resource-group](#terraform-ibm-resource-group)
 * [Examples](./examples)
-    * [Existing Resource group example](./examples/existing-resource-group)
-    * [New Resource group example](./examples/new-resource-group)
+    * [Existing resource group example](./examples/existing-resource-group)
+    * [New resource group example](./examples/new-resource-group)
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
