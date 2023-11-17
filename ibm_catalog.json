@@ -16,9 +16,9 @@
                 "group"
             ],
             "short_description": "Looks up or creates an IBM Cloud resource group by name",
-            "long_description": "This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.",
+            "long_description": "This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.\n### Usage\nCreate new Resource group:\n```hcl\nmodule \"resource_group\" {\n  # Replace \"X.X.X\" with a release version to lock into a specific release\n  source              = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source?archive=tgz&kind=terraform&name=terraform-ibm-resource-group&version=X.X.X\"\n  resource_group_name = \"new-resource-group\"\n}\n```\nReturn ID of an existing Resource group:\n```hcl\nmodule \"resource_group\" {\n  # Replace \"X.X.X\" with a release version to lock into a specific release\n  source                       = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source?archive=tgz&kind=terraform&name=terraform-ibm-resource-group&version=X.X.X\"\n  existing_resource_group_name = \"existing-resource-group\"\n}\n```",
             "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/blob/main/README.md",
-            "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/GoldeneyeDeployableArchitecture.svg",
+            "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-resource-group/main/images/resourcegroup_icon.svg",
             "features": [
                 {
                     "title": "Create an IBM Cloud resource group",
@@ -38,11 +38,11 @@
                         "diagrams": [
                             {
                                 "diagram": {
-                                    "caption": " ",
-                                    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg",
+                                    "caption": "New resource group example",
+                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
                                     "type": "image/svg+xml"
                                 },
-                                "description": " "
+                                "description": "An example showing how to create a new Resource group."
                             }
                         ]
                     }
@@ -55,11 +55,11 @@
                         "diagrams": [
                             {
                                 "diagram": {
-                                    "caption": " ",
-                                    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.svg",
+                                    "caption": "Existing resource group example",
+                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleDiagram_v2.svg",
                                     "type": "image/svg+xml"
                                 },
-                                "description": " "
+                                "description": "An example that shows how the module can take in an existing resource group name and return the resource group ID as an output."
                             }
                         ]
                     }
