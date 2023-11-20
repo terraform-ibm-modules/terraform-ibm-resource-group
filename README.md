@@ -5,6 +5,7 @@
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-resource-group?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/releases/latest)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Catalog release](https://img.shields.io/badge/release-IBM%20Cloud%20Catalog-3662FF?logo=ibm)](https://cloud.ibm.com/catalog/7df1e4ca-d54c-4fd0-82ce-3d13247308cd/modules/terraform-ibm-resource-group-de458c9b-835d-4014-b11f-d61ea081e986)
 
 This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.
 
