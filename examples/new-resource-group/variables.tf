@@ -7,5 +7,5 @@ variable "ibmcloud_api_key" {
 variable "resource_group_name" {
   type        = string
   description = "Resource group name"
-  default = "test-ar"
+  default     = "test-ar"
 }
