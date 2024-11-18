@@ -35,6 +35,7 @@
                 {
                     "label": "New resource group",
                     "name": "new-resource-group",
+                    "install_type": "fullstack",
                     "working_directory": "examples/new-resource-group",
                     "architecture": {
                         "diagrams": [
@@ -52,6 +53,7 @@
                 {
                     "label": "Existing resource group",
                     "name": "existing-resource-group",
+                    "install_type": "fullstack",
                     "working_directory": "examples/existing-resource-group",
                     "architecture": {
                         "diagrams": [
