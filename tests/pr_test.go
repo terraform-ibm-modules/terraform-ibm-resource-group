@@ -11,13 +11,13 @@ import (
 	"github.com/gruntwork-io/terratest/modules/logger"
 	"github.com/gruntwork-io/terratest/modules/random"
 	"github.com/gruntwork-io/terratest/modules/terraform"
-	"github.com/stretchr/testify/require"
-
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testhelper"
 )
 
 const newGroupExampleTerraformDir = "examples/new-resource-group"
+const defaultGroupExampleTerraformDir = "examples/default-resource-group"
 const existingGroupExampleTerraformDir = "examples/existing-resource-group"
 
 func TestRunNewGroupExample(t *testing.T) {
@@ -94,6 +94,19 @@ func TestRunExistingGroupExample(t *testing.T) {
 		terraform.WorkspaceDelete(t, existingTerraformOptions, prefix)
 		logger.Log(t, "END: Destroy (existing resources)")
 	}
+}
+
+func TestRunDefaultGroupExample(t *testing.T) {
+	t.Parallel()
+
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: defaultGroupExampleTerraformDir,
+	})
+
+	output, err := options.RunTestConsistency()
+	assert.Nil(t, err, "This should not have errored")
+	assert.NotNil(t, output, "Expected some output")
 }
 
 func TestRunUpgradeExample(t *testing.T) {
