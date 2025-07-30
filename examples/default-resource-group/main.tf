@@ -1,3 +1,3 @@
 module "resource_group" {
-  source                       = "../../"
+  source = "../../"
 }
