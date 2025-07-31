@@ -107,6 +107,7 @@ func TestRunDefaultGroupExample(t *testing.T) {
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
 	assert.NotNil(t, output, "Expected some output")
+	assert.Equal(t, output.RawPlan.OutputChanges["resource_group_name"].After.(string), "Default")
 }
 
 func TestRunUpgradeExample(t *testing.T) {
