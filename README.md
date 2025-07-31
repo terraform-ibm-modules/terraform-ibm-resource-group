@@ -6,7 +6,7 @@
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.
+This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID. The module will return the ID of the default resource group if no name is passed.
 
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
@@ -37,6 +37,13 @@ module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
   version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
   existing_resource_group_name = "existing-resource-group"
+}
+```
+Return ID of the default Resource group:
+```hcl
+module "resource_group" {
+  source                       = "terraform-ibm-modules/resource-group/ibm"
+  version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
 }
 ```
 
