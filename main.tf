@@ -8,7 +8,7 @@
 # Use a local variable to determine if the default resource group should be used
 locals {
   # Use the local variable to decide which resource group name to use
-  existing_resource_group_name = var.existing_resource_group_name == null ? data.ibm_resource_group.default[0].name : var.existing_resource_group_name
+  existing_resource_group_name = var.existing_resource_group_name != null ? var.existing_resource_group_name : var.resource_group_name == null ? data.ibm_resource_group.default[0].name : null
 }
 
 data "ibm_resource_group" "default" {
