@@ -6,13 +6,14 @@
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID.
+This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID. The module will return the ID of the default resource group if no name is passed.
 
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
 * [terraform-ibm-resource-group](#terraform-ibm-resource-group)
 * [Examples](./examples)
+    * [Default resource group example](./examples/default-resource-group)
     * [Existing resource group example](./examples/existing-resource-group)
     * [New resource group example](./examples/new-resource-group)
 * [Contributing](#contributing)
@@ -36,6 +37,13 @@ module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
   version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
   existing_resource_group_name = "existing-resource-group"
+}
+```
+Return ID of the default Resource group:
+```hcl
+module "resource_group" {
+  source                       = "terraform-ibm-modules/resource-group/ibm"
+  version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
 }
 ```
 
@@ -63,13 +71,14 @@ No modules.
 | Name | Type |
 |------|------|
 | [ibm_resource_group.resource_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_group) | resource |
+| [ibm_resource_group.default](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_group) | data source |
 | [ibm_resource_group.existing_resource_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_group) | data source |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_existing_resource_group_name"></a> [existing\_resource\_group\_name](#input\_existing\_resource\_group\_name) | Name of the existing resource group.  Required if not creating new resource group | `string` | `null` | no |
+| <a name="input_existing_resource_group_name"></a> [existing\_resource\_group\_name](#input\_existing\_resource\_group\_name) | Name of the existing resource group. When null, set to the account's default resource group. | `string` | `null` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group to create. Required if not using existing resource group | `string` | `null` | no |
 
 ### Outputs
