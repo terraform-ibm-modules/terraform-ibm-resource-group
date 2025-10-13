@@ -8,8 +8,9 @@ output "resource_group_id" {
   description = "Resource group ID"
 }
 
-variable "IC_ENV_TAGS" {}
-
-output "tags" {
-value = var.IC_ENV_TAGS
+resource "null_resource" "get_tf_env" {
+  provisioner "local-exec" {
+    command = "env"
+    interpreter = ["bash", "-c"]
+  }
 }
