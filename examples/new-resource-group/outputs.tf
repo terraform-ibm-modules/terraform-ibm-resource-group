@@ -14,3 +14,7 @@ resource "null_resource" "get_tf_env" {
     interpreter = ["bash", "-c"]
   }
 }
+
+output "test" {
+value = null_resource.get_tf_env
+}
