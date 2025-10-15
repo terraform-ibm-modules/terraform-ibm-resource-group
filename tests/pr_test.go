@@ -75,7 +75,7 @@ func TestRunExistingGroupExample(t *testing.T) {
 		})
 
 		options.TerraformVars = map[string]interface{}{
-			"resource_group_name": terraform.Output(t, existingTerraformOptions, "resource_group_name"),
+			"existing_resource_group_name": terraform.Output(t, existingTerraformOptions, "resource_group_name"),
 		}
 
 		output, err := options.RunTestConsistency()
@@ -96,7 +96,7 @@ func TestRunExistingGroupExample(t *testing.T) {
 	}
 }
 
-func TestRunDefaultGroupExample(t *testing.T) {
+func TestRunDefaultGroupExampleUsingNull(t *testing.T) {
 	t.Parallel()
 
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
@@ -110,8 +110,43 @@ func TestRunDefaultGroupExample(t *testing.T) {
 	assert.Equal(t, output.RawPlan.OutputChanges["resource_group_name"].After.(string), "Default")
 }
 
+func TestRunDefaultGroupExampleUsingCapDefault(t *testing.T) {
+	t.Parallel()
+
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: defaultGroupExampleTerraformDir,
+	})
+
+	options.TerraformVars = map[string]interface{}{
+		"existing_resource_group_name": "Default",
+	}
+
+	output, err := options.RunTestConsistency()
+	assert.Nil(t, err, "This should not have errored")
+	assert.NotEmpty(t, output.RawPlan.OutputChanges["resource_group_id"].After.(string))
+	assert.Equal(t, output.RawPlan.OutputChanges["resource_group_name"].After.(string), "Default")
+}
+
+func TestRunDefaultGroupExampleUsingLowerDefault(t *testing.T) {
+	t.Parallel()
+
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:      t,
+		TerraformDir: defaultGroupExampleTerraformDir,
+	})
+
+	options.TerraformVars = map[string]interface{}{
+		"existing_resource_group_name": "default",
+	}
+
+	output, err := options.RunTestConsistency()
+	assert.Nil(t, err, "This should not have errored")
+	assert.NotEmpty(t, output.RawPlan.OutputChanges["resource_group_id"].After.(string))
+	assert.Equal(t, output.RawPlan.OutputChanges["resource_group_name"].After.(string), "Default")
+}
+
 func TestRunUpgradeExample(t *testing.T) {
-	t.Skip()
 	t.Parallel()
 
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{

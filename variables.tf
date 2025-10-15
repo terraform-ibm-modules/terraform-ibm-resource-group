@@ -14,7 +14,7 @@ variable "resource_group_name" {
 
 variable "existing_resource_group_name" {
   type        = string
-  description = "Name of the existing resource group. When null, set to the account's default resource group."
+  description = "Name of an existing resource group. When set to `null`, `default` or `Default` the accounts default resource group is returned."
   default     = null
 }
 ##############################################################################

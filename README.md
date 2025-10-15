@@ -6,7 +6,7 @@
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID. The module will return the ID of the default resource group if no name is passed.
+This module returns the ID for the name of a resource group. It can also create a group from a name and return the ID. The module will return the ID of the default resource group if no name is passed, or if the string "Default" or "default" is passed (even if that is not the name of the actual default resource group in the account).
 
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
@@ -27,7 +27,7 @@ Create new Resource group:
 ```hcl
 module "resource_group" {
   source              = "terraform-ibm-modules/resource-group/ibm"
-  version             = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
+  version             = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
   resource_group_name = "new-resource-group"
 }
 ```
@@ -35,15 +35,31 @@ Return ID of an existing Resource group:
 ```hcl
 module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
-  version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
+  version                      = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
   existing_resource_group_name = "existing-resource-group"
 }
 ```
-Return ID of the default Resource group:
+Return ID of the default Resource group by passing no name:
+```hcl
+module "resource_group" {
+  source  = "terraform-ibm-modules/resource-group/ibm"
+  version = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
+}
+```
+Return ID of the default Resource group by the string "Default":
 ```hcl
 module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
-  version                      = "X.X.X" # Replace "X.X.X" with a release version to lock into a specific release
+  version                      = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
+  existing_resource_group_name = "Default"
+}
+```
+Return ID of the default Resource group by the string "default":
+```hcl
+module "resource_group" {
+  source                       = "terraform-ibm-modules/resource-group/ibm"
+  version                      = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
+  existing_resource_group_name = "default"
 }
 ```
 
@@ -78,7 +94,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_existing_resource_group_name"></a> [existing\_resource\_group\_name](#input\_existing\_resource\_group\_name) | Name of the existing resource group. When null, set to the account's default resource group. | `string` | `null` | no |
+| <a name="input_existing_resource_group_name"></a> [existing\_resource\_group\_name](#input\_existing\_resource\_group\_name) | Name of an existing resource group. When set to `null`, `default` or `Default` the accounts default resource group is returned. | `string` | `null` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group to create. Required if not using existing resource group | `string` | `null` | no |
 
 ### Outputs
