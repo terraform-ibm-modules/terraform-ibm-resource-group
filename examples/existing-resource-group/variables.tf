@@ -4,7 +4,7 @@ variable "ibmcloud_api_key" {
   sensitive   = true
 }
 
-variable "resource_group_name" {
+variable "existing_resource_group_name" {
   type        = string
-  description = "Resource group name"
+  description = "Existing Resource group name"
 }

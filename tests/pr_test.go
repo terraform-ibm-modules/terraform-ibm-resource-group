@@ -75,7 +75,7 @@ func TestRunExistingGroupExample(t *testing.T) {
 		})
 
 		options.TerraformVars = map[string]interface{}{
-			"resource_group_name": terraform.Output(t, existingTerraformOptions, "resource_group_name"),
+			"existing_resource_group_name": terraform.Output(t, existingTerraformOptions, "resource_group_name"),
 		}
 
 		output, err := options.RunTestConsistency()

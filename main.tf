@@ -8,7 +8,7 @@
 locals {
   # when resource_group_name is null, lookup account default group if existing_resource_group_name is null, "Default" or "default"
   lookup_default_group         = var.resource_group_name != null ? false : var.existing_resource_group_name != null ? lower(var.existing_resource_group_name) == "default" ? true : false : true
-  lookup_existing_group        = var.resource_group_name == null && local.lookup_default_group ? true : false
+  lookup_existing_group        = var.resource_group_name == null && !local.lookup_default_group ? true : false
   existing_resource_group_name = var.existing_resource_group_name != null ? lower(var.existing_resource_group_name) == "default" ? data.ibm_resource_group.default[0].name : var.existing_resource_group_name : var.resource_group_name == null ? data.ibm_resource_group.default[0].name : null
 }
 
