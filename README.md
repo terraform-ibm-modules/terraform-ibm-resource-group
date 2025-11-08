@@ -13,9 +13,9 @@ This module returns the ID for the name of a resource group. It can also create 
 ## Overview
 * [terraform-ibm-resource-group](#terraform-ibm-resource-group)
 * [Examples](./examples)
-    * [Default resource group example](./examples/default-resource-group)
-    * [Existing resource group example](./examples/existing-resource-group)
-    * [New resource group example](./examples/new-resource-group)
+    * <div style="display: inline-block;"><a href="./examples/default-resource-group">Default resource group example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=rg-default-resource-group-example&repository=github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/default-resource-group" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/existing-resource-group">Existing resource group example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=rg-existing-resource-group-example&repository=github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/existing-resource-group" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
+    * <div style="display: inline-block;"><a href="./examples/new-resource-group">New resource group example</a></div> <div style="display: inline-block; vertical-align: middle;"><a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=rg-new-resource-group-example&repository=github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/new-resource-group" target="_blank"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button"></a></div>
 * [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
