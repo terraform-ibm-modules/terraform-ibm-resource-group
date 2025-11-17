@@ -5,12 +5,9 @@ on:
   issue_comment:
     types:
       - created
+
 jobs:
   call-terraform-ci-pipeline:
     uses: terraform-ibm-modules/common-pipeline-assets/.github/workflows/common-terraform-module-ci-v2.yml@v1.24.0
     secrets: inherit
-    with:
-        craSCCv2: true
-        craTarget: "examples/new-resource-group"
-        craRuleIgnoreFile: "cra-tf-validate-ignore-rules.json"
-        craEnvironmentVariables: "TF_VAR_resource_group_name=new-resource-group"
+
