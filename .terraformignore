@@ -1,3 +1,6 @@
-ci/
-Makefile
 .pre-commit-config.yaml
+Makefile
+ci
+common-dev-assets/.pre-commit-config.yaml
+common-dev-assets/Makefile
+common-dev-assets/ci
