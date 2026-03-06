@@ -5,7 +5,11 @@
 <!-- END SCHEMATICS DEPLOY HOOK -->
 
 
-An example showing how the module can take in an existing Resource group name, and return the Resource group ID as an output.
+An example showing how the module can take in an existing Resource group name or ID, and return the Resource group details as outputs.
+
+You can provide either:
+- `existing_resource_group_name` - The name of an existing resource group
+- `existing_resource_group_id` - The ID of an existing resource group (recommended, as IDs are static while names can be updated)
 
 <!-- BEGIN SCHEMATICS DEPLOY TIP HOOK -->
 :information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab

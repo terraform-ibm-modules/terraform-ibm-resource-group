@@ -33,7 +33,15 @@ module "resource_group" {
   resource_group_name = "new-resource-group"
 }
 ```
-Return ID of an existing Resource group:
+Return details of an existing Resource group by ID:
+```hcl
+module "resource_group" {
+  source                     = "terraform-ibm-modules/resource-group/ibm"
+  version                    = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
+  existing_resource_group_id = "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+}
+```
+Return details of an existing Resource group by name:
 ```hcl
 module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
