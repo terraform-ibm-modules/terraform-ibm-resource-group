@@ -12,5 +12,5 @@ variable "existing_resource_group_name" {
 
 variable "existing_resource_group_id" {
   type        = string
-  description = "Existing Resource group ID. This is preferred over name as IDs are static while names can be updated. Terraform will prompt for this value if not provided."
+  description = "Existing Resource group ID"
 }
