@@ -9,7 +9,7 @@ An example showing how the module can take in an existing Resource group name or
 
 You can provide either:
 - `existing_resource_group_name` - The name of an existing resource group
-- `existing_resource_group_id` - The ID of an existing resource group 
+- `existing_resource_group_id` - The ID of an existing resource group
 
 <!-- BEGIN SCHEMATICS DEPLOY TIP HOOK -->
 :information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
