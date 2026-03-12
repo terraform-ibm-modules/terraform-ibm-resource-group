@@ -8,7 +8,7 @@ variable "resource_group_name" {
   default     = null
   validation {
     condition     = !(var.resource_group_name != null && (var.existing_resource_group_name != null || var.existing_resource_group_id != null))
-    error_message = "only 'resource_group_name' or 'existing_resource_group_name' or 'existing_resource_group_id' can be given"
+    error_message = "You must specify either `resource_group_name`, `existing_resource_group_name`, or `existing_resource_group_id` - only one is allowed."
   }
 }
 
@@ -18,7 +18,7 @@ variable "existing_resource_group_name" {
   default     = null
   validation {
     condition     = !(var.existing_resource_group_name != null && var.existing_resource_group_id != null)
-    error_message = "only 'existing_resource_group_name' or 'existing_resource_group_id' can be given, but both have been given"
+    error_message = "You must specify either `existing_resource_group_name` or `existing_resource_group_id` but both are provided."
   }
 }
 
