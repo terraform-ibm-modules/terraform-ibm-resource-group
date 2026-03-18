@@ -12,27 +12,13 @@ This module returns the ID for the name of a resource group. It can also create 
 <!-- Below content is automatically populated via pre-commit hook -->
 <!-- BEGIN OVERVIEW HOOK -->
 ## Overview
-<ul>
-  <li><a href="#terraform-ibm-resource-group">terraform-ibm-resource-group</a></li>
-  <li><a href="./examples">Examples</a>
-    <ul>
-      <li>
-        <a href="./examples/default-resource-group">Default resource group example</a>
-        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-default-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/default-resource-group"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-      </li>
-      <li>
-        <a href="./examples/existing-resource-group">Existing resource group example</a>
-        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-existing-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/existing-resource-group"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-      </li>
-      <li>
-        <a href="./examples/new-resource-group">New resource group example</a>
-        <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-new-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/new-resource-group"><img src="https://img.shields.io/badge/Deploy%20with%20IBM%20Cloud%20Schematics-0f62fe?style=flat&logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-      </li>
-    </ul>
-    ℹ️ Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab.
-  </li>
-  <li><a href="#contributing">Contributing</a></li>
-</ul>
+* [terraform-ibm-resource-group](#terraform-ibm-resource-group)
+* [Examples](./examples)
+:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
+    * <a href="./examples/default-resource-group">Default resource group example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-default-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/default-resource-group"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+    * <a href="./examples/existing-resource-group">Existing resource group example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-existing-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/existing-resource-group"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+    * <a href="./examples/new-resource-group">New resource group example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=resource-group-new-resource-group-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/tree/main/examples/new-resource-group"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+* [Contributing](#contributing)
 <!-- END OVERVIEW HOOK -->
 
 <!-- This heading should always match the name of the root level module (aka the repo name) -->
