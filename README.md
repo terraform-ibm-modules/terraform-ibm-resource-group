@@ -33,7 +33,15 @@ module "resource_group" {
   resource_group_name = "new-resource-group"
 }
 ```
-Return ID of an existing Resource group:
+Return details of an existing Resource group by ID:
+```hcl
+module "resource_group" {
+  source                     = "terraform-ibm-modules/resource-group/ibm"
+  version                    = "X.Y.Z" # Replace "X.Y.Z" with a release version to lock into a specific release
+  existing_resource_group_id = "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6" # pragma: allowlist secret
+}
+```
+Return details of an existing Resource group by name:
 ```hcl
 module "resource_group" {
   source                       = "terraform-ibm-modules/resource-group/ibm"
@@ -78,7 +86,7 @@ You need the following permissions to run this module.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
-| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.79.0, < 2.0.0 |
+| <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.88.0, < 2.0.0 |
 
 ### Modules
 
@@ -91,11 +99,13 @@ No modules.
 | [ibm_resource_group.resource_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_group) | resource |
 | [ibm_resource_group.default](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_group) | data source |
 | [ibm_resource_group.existing_resource_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_group) | data source |
+| [ibm_resource_group.existing_resource_group_by_id](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_group) | data source |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_existing_resource_group_id"></a> [existing\_resource\_group\_id](#input\_existing\_resource\_group\_id) | ID of an existing resource group. When set to `null` the module will use `existing_resource_group_name` or the accounts default resource group. | `string` | `null` | no |
 | <a name="input_existing_resource_group_name"></a> [existing\_resource\_group\_name](#input\_existing\_resource\_group\_name) | Name of an existing resource group. When set to `null`, `default` or `Default` the accounts default resource group is returned. | `string` | `null` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group to create. Required if not using existing resource group | `string` | `null` | no |
 
